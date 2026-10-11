@@ -1,13 +1,18 @@
+
 [project]
 name = "sps-genai"
 version = "0.1.0"
-description = "Add your description here"
+description = "FastAPI application with text generation, word embeddings, and CNN image classification"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "fastapi[standard]>=0.141.1",
     "spacy>=3.8.16",
     "uvicorn>=0.54.0",
+    "torch",
+    "torchvision",
+    "pillow",
+    "python-multipart",
 ]
 
 [project.scripts]
