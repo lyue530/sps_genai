@@ -13,12 +13,16 @@ from pydantic import BaseModel
 from app.bigram_model import BigramModel
 from app.cnn_model import AssignmentCNN
 from app.gan_api import router as gan_router
+from assignment4.api import router as assignment4_router
 
 # Initialize FastAPI
 app = FastAPI()
 
 # Register GAN image generation API
 app.include_router(gan_router)
+
+# Register Diffusion and Energy Model APIs
+app.include_router(assignment4_router)
 
 # =====================================
 # Load spaCy model
